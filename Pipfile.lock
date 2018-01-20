@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "58ec3304ac42c73b4f0c3d8995ecd06996fea42933f9766afa2cf6d0e8f726bf"
+            "sha256": "e760f641cc109c73e64050cea95a2277c25028c5041fc49afa46f745515bffaf"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -29,12 +29,38 @@
         ]
     },
     "default": {
+        "pyserial": {
+            "hashes": [
+                "sha256:e0770fadba80c31013896c7e6ef703f72e7834965954a78e71a3049488d4d7d8",
+                "sha256:6e2d401fdee0eab996cf734e67773a0143b932772ca8b42451440cfed942c627"
+            ],
+            "version": "==3.4"
+        },
+        "pyudev": {
+            "hashes": [
+                "sha256:094b7a100150114748aaa3b70663485dd360457a709bfaaafe5a977371033f2b"
+            ],
+            "version": "==0.21.0"
+        },
+        "rshell": {
+            "hashes": [
+                "sha256:1801425051681b8a7fb646428b563a7d9461a2e704665c18ee4ec764f1de21a6"
+            ],
+            "version": "==0.0.11"
+        },
         "sh": {
             "hashes": [
                 "sha256:ae3258c5249493cebe73cb4e18253a41ed69262484bad36fdb3efcb8ad8870bb",
                 "sha256:b52bf5833ed01c7b5c5fb73a7f71b3d98d48e9b9b8764236237bdc7ecae850fc"
             ],
             "version": "==1.12.14"
+        },
+        "six": {
+            "hashes": [
+                "sha256:832dc0e10feb1aa2c68dcc57dbb658f1c7e65b9b61af69048abc87a2db00a0eb",
+                "sha256:70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9"
+            ],
+            "version": "==1.11.0"
         }
     },
     "develop": {}

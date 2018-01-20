@@ -1,13 +1,13 @@
-import mfrc522
+import rfid
 from os import uname
 
 
-def do_read():
+def do_read(hspi=True):
 
 	if uname()[0] == 'WiPy':
-		rdr = mfrc522.MFRC522("GP14", "GP16", "GP15", "GP22", "GP17")
+		rdr = rfid.MFRC522("GP14", "GP16", "GP15", "GP22", "GP17")
 	elif uname()[0] == 'esp8266':
-		rdr = mfrc522.MFRC522(14, 13, 12, 16, 15)
+		rdr = rfid.MFRC522(sck=14, mosi=13, miso=12, rst=16, cs=15, hspi=hspi)
 	else:
 		raise RuntimeError("Unsupported platform")
 
@@ -42,5 +42,36 @@ def do_read():
 					else:
 						print("Failed to select tag")
 
+	except KeyboardInterrupt:
+		print("Bye")
+
+
+def read_tag(hspi=True):
+
+	if uname()[0] == 'WiPy':
+		rdr = rfid.MFRC522("GP14", "GP16", "GP15", "GP22", "GP17")
+	elif uname()[0] == 'esp8266':
+		rdr = rfid.MFRC522(sck=14, mosi=13, miso=12, rst=16, cs=15, hspi=hspi)
+	else:
+		raise RuntimeError("Unsupported platform")
+
+	print("")
+	print("Place card before reader to read from address 0x08")
+	print("")
+
+	try:
+		while True:
+
+			(stat, tag_type) = rdr.request(rdr.REQIDL)
+
+			if stat == rdr.OK:
+
+				(stat, raw_uid) = rdr.anticoll()
+
+				if stat == rdr.OK:
+					print("New card detected")
+					print("  - tag type: 0x%02x" % tag_type)
+					print("  - uid	 : 0x%02x%02x%02x%02x" % (raw_uid[0], raw_uid[1], raw_uid[2], raw_uid[3]))
+					print("")
 	except KeyboardInterrupt:
 		print("Bye")
