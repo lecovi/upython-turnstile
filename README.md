@@ -8,6 +8,15 @@ turnstile.
 - [NodeMCU Official Documentation](https://nodemcu.readthedocs.io/en/master/)
 - [Micropython ESP8266 Download](http://micropython.org/download#esp8266)
 - [How to flash NoceMCU with Micropython (Spanish Version)](http://leo.bitson.com.ar/blog/micropython-en-la-nodemcu/)
+- [Adafruit Micropython Tool](https://github.com/adafruit/ampy)
+- [Remote Micropython Shell](https://github.com/dhylands/rshell)
+
+### I use this libraries
+
+After playing a litlle while with some various libraries I chose:
+
+- [MFRC522](https://github.com/wendlers/micropython-mfrc522)
+- [Micropython I2C LCD](https://github.com/dhylands/python_lcd/)
 
 ## Connect to your board not using sudo
 
