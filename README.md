@@ -18,6 +18,10 @@ After playing a litlle while with some various libraries I chose:
 - [MFRC522](https://github.com/wendlers/micropython-mfrc522)
 - [Micropython I2C LCD](https://github.com/dhylands/python_lcd/)
 
+### Pinout
+
+![NodeMCU Pinout](/img/nodemcu_pins.png)
+
 ## Connect to your board not using sudo
 
 It's a big a chance that your USB device can only be accessed by `root`. Check
