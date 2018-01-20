@@ -21,6 +21,9 @@ After playing a litlle while with some various libraries I chose:
 ### Pinout
 
 ![NodeMCU Pinout](/img/nodemcu_pins.png)
+![Pin Allocations](http://www.esp8266.com/wiki/doku.php?id=esp8266_gpio_pin_allocations)
+
+- [ESP8266 Wiki GPIO Allocation](http://www.esp8266.com/wiki/doku.php?id=esp8266_gpio_pin_allocations)
 
 ## Connect to your board not using sudo
 
