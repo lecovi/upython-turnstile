@@ -21,7 +21,7 @@ After playing a litlle while with some various libraries I chose:
 ### Pinout
 
 ![NodeMCU Pinout](/img/nodemcu_pins.png)
-![Pin Allocations](http://www.esp8266.com/wiki/doku.php?id=esp8266_gpio_pin_allocations)
+![Pin Allocations](http://www.esp8266.com/wiki/lib/exe/fetch.php?media=pin_functions.png)
 
 - [ESP8266 Wiki GPIO Allocation](http://www.esp8266.com/wiki/doku.php?id=esp8266_gpio_pin_allocations)
 
