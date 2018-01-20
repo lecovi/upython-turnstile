@@ -230,3 +230,27 @@ class MFRC522:
                 stat = self.ERR
 
         return stat
+
+    def read_tag(self):
+        print("")
+        print("Place card before reader to read from address 0x08")
+        print("")
+
+        try:
+            while True:
+
+                (stat, tag_type) = self.request(self.REQIDL)
+
+                if stat == self.OK:
+
+                    (stat, raw_uid) = self.anticoll()
+
+                    if stat == self.OK:
+                        print("New card detected")
+                        print("  - tag type: 0x%02x" % tag_type)
+                        print("  - uid	 : 0x%02x%02x%02x%02x" % (raw_uid[0], raw_uid[1], raw_uid[2], raw_uid[3]))
+                        print("")
+                    return stat, tag_type, raw_uid
+        except KeyboardInterrupt:
+            print("Bye")
+            return None
