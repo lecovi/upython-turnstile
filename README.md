@@ -25,6 +25,10 @@ After playing a litlle while with some various libraries I chose:
 
 - [ESP8266 Wiki GPIO Allocation](http://www.esp8266.com/wiki/doku.php?id=esp8266_gpio_pin_allocations)
 
+## Connecting to a breadboard
+
+![Breadboard connection](/fritzing/turnstile_bb.png)
+
 ## Connect to your board not using sudo
 
 It's a big a chance that your USB device can only be accessed by `root`. Check
