@@ -11,6 +11,7 @@ sh = "*"
 rshell = "*"
 transitions = "*"
 fysom = "*"
+ipython = "*"
 
 
 [dev-packages]
