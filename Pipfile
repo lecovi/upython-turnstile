@@ -10,6 +10,7 @@ name = "pypi"
 sh = "*"
 rshell = "*"
 transitions = "*"
+fysom = "*"
 
 
 [dev-packages]

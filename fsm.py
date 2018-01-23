@@ -1,7 +1,7 @@
-from transitions import Machine
+class Machine:
+    pass
 
-
-class Performance():
+class Performance:
     VALID_PERFORMANCE = ['NORMAL', 'FLEXIBLE', 'LIBERADA', 'DESHABILITADO']
     MODE = ['ENTRADA', 'SALIDA', 'VISITAS']
 
@@ -10,13 +10,13 @@ class Performance():
         self.mode = mode
         self.input_enabled = None
         self.output_enabled = None
-        
+
         self._config_arm()
 
     def _config_arm(self):
         assert self.name in Performance.VALID_PERFORMANCE
         assert self.mode in Performance.MODE
-        
+
         if self.name in ['NORMAL', 'FLEXIBLE']:
             if self.mode == 'ENTRADA':
                 self.input_enabled = False
@@ -44,12 +44,12 @@ class Performance():
         return 'Performance: {}, Mode: {}'.format(self.name, self.mode)
 
 
-class TurnstileMachine():
+class TurnstileMachine:
     states = ['stand by', 'access_1', 'access_2', 'access_3', 'leave_1', 'leave_2', 'leave_3']
     
-    def __init__(self, name, performance='NORMAL', mode='ENTRADA'):
+    def __init__(self, name): #, performance='NORMAL', mode='ENTRADA'):
         self.name = name
-        self.performance = Performance(name=performance, mode=mode)
+        # self.performance = Performance(name=performance, mode=mode)
         self.access_granted = False
         self.exit_granted = True
         self.solenoid = False
@@ -70,7 +70,6 @@ class TurnstileMachine():
         self.machine.add_transition(source='leave_3', trigger='input_off', dest='stand by', after='register_exit')
         self.machine.add_transition(source='leave_3', trigger='output_on', dest='leave_2')
 
- 
     def input_activate_solenoid(self):
         if not self.access_granted:
             self.solenoid = True

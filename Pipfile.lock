@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "e94c67c90099671945d2e0adfbe432fc637c60c8d5343e4b0fae08752a640c14"
+            "sha256": "c1ed8a94148053647497d9363f893f7efb87a1aac563705b3c7977a7721e8da6"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -29,6 +29,12 @@
         ]
     },
     "default": {
+        "fysom": {
+            "hashes": [
+                "sha256:f270b0cbd6e40721ef04340419598affdb2e7b981deb27b59551c5bca2535c34"
+            ],
+            "version": "==2.1.5"
+        },
         "pyserial": {
             "hashes": [
                 "sha256:e0770fadba80c31013896c7e6ef703f72e7834965954a78e71a3049488d4d7d8",
